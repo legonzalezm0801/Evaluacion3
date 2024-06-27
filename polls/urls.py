@@ -1,8 +1,10 @@
 # Importamos path de django.urls para definir las rutas
 from django.urls import path
-# Importamos las vistas desde el módulo views
 from . import views
 
+urlpatterns = [
+    path('productos/', views.productos, name='productos'),
+]
 # Definimos las rutas y las asociamos con las vistas correspondientes
 urlpatterns = [
     path('', views.index, name='index'),  # Ruta para la vista principal

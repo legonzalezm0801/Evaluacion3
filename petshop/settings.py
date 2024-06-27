@@ -38,6 +38,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'petshop.urls'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 TEMPLATES = [
     {

@@ -1,9 +1,12 @@
-# Importamos include y path desde django.urls
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import path, include
 
-# Definimos las rutas del proyecto principal y enlazamos las rutas de la aplicación polls
 urlpatterns = [
-    path('admin/', admin.site.urls),  # Ruta para la administración de Django
-    path('polls/', include('polls.urls')),  # Incluimos las rutas definidas en polls/urls.py
+    path('admin/', admin.site.urls),
+    path('', include('polls.urls')),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
