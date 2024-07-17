@@ -28,19 +28,19 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link active" href="{% static 'html/Pagina1.html' %}">Inicio</a>
+              <a class="nav-link active" href="{% url 'index' %}">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% static 'html/productos.html' %}">Productos</a>
+              <a class="nav-link" href="{% url 'productos' %}">Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% static 'html/Carrito.html' %}">Mi Carrito</a>
+              <a class="nav-link" href="{% url 'carrito' %}">Mi Carrito</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="{% static 'html/InicioSesion.html' %}">Iniciar Sesión</a>
+              <a class="nav-link" aria-current="page" href="{% url 'inicio' %}">Iniciar Sesión</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% static 'html/Registrarse.html' %}">Registrarse</a>
+              <a class="nav-link" href="{% url 'registrarse' %}">Registrarse</a>
             </li>
           </ul>
         </div>

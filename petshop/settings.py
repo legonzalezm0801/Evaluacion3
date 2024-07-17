@@ -38,9 +38,20 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'petshop.urls'
+
+# Media files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = '/static/'
+
+# Directorios adicionales de archivos estáticos
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'polls/static'),
+]
+
+# Templates
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -68,11 +79,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
-
-STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

@@ -1,0 +1,6 @@
+/* Esto es para ajustar la card */
+.card-img-top {
+    width: 100%; 
+    height: 500px; 
+    object-fit: contain; 
+}
